@@ -14,7 +14,7 @@
 
 ![Gallery](resources/CleanShot-Obsidian-Croppie-PLUGIN-Obsidian-v1.4.2-20230808072636.png)
 
-### Plugin settings
+### Settings
 
 ![Plugin settings](resources/CleanShot-Obsidian-Croppie-PLUGIN-Obsidian-v1.4.2-20230808072712.png)
 

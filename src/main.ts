@@ -16,10 +16,10 @@ interface CroppiePluginSettings {
 }
 
 const DEFAULT_SETTINGS: CroppiePluginSettings = {
-  inputFolder: "assets",
+  inputFolder: "assets/input",
   serverPort: "1337",
-  imagePath: "assets",
-  outputFolder: "cropped",
+  imagePath: "",
+  outputFolder: "assets/output",
   // showThumbs: false,
   croppedImage: "",
 }
