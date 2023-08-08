@@ -1,0 +1,10 @@
+{
+	"id": "croppie",
+	"name": "Croppie",
+	"version": "0.1.0-beta",
+	"minAppVersion": "0.15.0",
+	"description": "Crop and OCR images",
+	"author": "@gapmiss",
+	"authorUrl": "https://github.com/gapmiss",
+	"isDesktopOnly": true
+}
