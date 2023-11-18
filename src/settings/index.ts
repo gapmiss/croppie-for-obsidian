@@ -98,6 +98,17 @@ export class CroppiePluginSettingTab extends PluginSettingTab {
       })
     );
     /**/
+		new Setting(containerEl)
+		.setName('Random I.D.')
+		.setDesc('Append image filename with a random I.D. for rapid cropping of different sizes. Prevents image files from being over-written in the output folder.')
+		.addToggle(toggle =>
+			toggle
+			.setValue(this.plugin.settings.randomID)
+			.onChange(async newValue => {
+				this.plugin.settings.randomID = newValue;
+				await this.plugin.saveSettings();
+			})
+		);
     new Setting(containerEl)
     .setName('Apply new settings and restart image server')
     .addButton(button =>

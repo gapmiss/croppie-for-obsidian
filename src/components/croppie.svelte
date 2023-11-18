@@ -34,7 +34,7 @@
   const imgFile = app.vault.getAbstractFileByPath(filePath);
   let ext = imgFile.extension;
 
-  plugin.settings.croppedImage = imgFile.basename+"-"+makeid(8)+"."+ext;
+  plugin.settings.croppedImage = imgFile.basename + (plugin.settings.randomID) ? '-' + makeid(8) : '' + "."+ext;
 
   const Run = (function() {
 
@@ -67,7 +67,8 @@
           format: ext
         }).then( async (blob) => {
           var data = decodeBase64Image(blob);
-          saveFile(data.data, imgFile.basename+"-"+makeid(8)+"."+ext);
+          console.log(plugin.settings.randomID)
+          saveFile(data.data, imgFile.basename + ((plugin.settings.randomID) ? '-' + makeid(8) : '') + "."+ext);
         });
       });
 
@@ -79,7 +80,7 @@
         }).then(function (blob) {
           new Notice('Preparing download…', 1000);
           var data =  decodeBase64Image(blob);
-          downloadFile(data.data, imgFile.basename+"-"+makeid(8)+"."+ext);
+          downloadFile(data.data, imgFile.basename + (plugin.settings.randomID) ? '-' + makeid(8) : '' + "."+ext);
         });
       });
 

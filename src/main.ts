@@ -12,6 +12,7 @@ interface CroppiePluginSettings {
   imagePath: string;
   outputFolder: string;
   // showThumbs: boolean;
+  randomID: boolean;
   croppedImage: string;
 }
 
@@ -21,6 +22,7 @@ const DEFAULT_SETTINGS: CroppiePluginSettings = {
   imagePath: "",
   outputFolder: "assets/output",
   // showThumbs: false,
+  randomID: true,
   croppedImage: "",
 }
 
@@ -31,6 +33,7 @@ export default class CroppiePlugin extends Plugin {
   imagePath: any;
   outputFolder: any;
   // showThumbs: boolean;
+  randomID: boolean;
   adapter: DataAdapter = app.vault.adapter;
   d: any = new Date();
   croppedImage: any;
@@ -140,7 +143,7 @@ export default class CroppiePlugin extends Plugin {
       await worker.initialize('eng');
       const { data: { text } } = await worker.recognize(croppedImageToOCR);
       const newFile = await this.app.vault.create(
-        this.settings.outputFolder+'/'+baseName + '-' + await this.makeid(8) + ".md",
+        this.settings.outputFolder+'/'+baseName + (this.settings.randomID) ? '-' + await this.makeid(8) : '' + ".md",
         await this.createText(
           fileName,
           text
