@@ -1,7 +1,7 @@
 {
 	"id": "croppie",
 	"name": "Croppie",
-	"version": "0.1.0-beta",
+	"version": "0.2.0-beta",
 	"minAppVersion": "0.15.0",
 	"description": "Crop and OCR images",
 	"author": "@gapmiss",

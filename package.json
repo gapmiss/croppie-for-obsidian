@@ -1,6 +1,6 @@
 {
 	"name": "croppie-for-obsidian",
-	"version": "0.1.0-beta",
+	"version": "0.2.0-beta",
 	"description": "Image cropping plugin for Obsidian.md (https://obsidian.md)",
 	"main": "main.js",
 	"scripts": {
