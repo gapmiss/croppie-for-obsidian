@@ -67,7 +67,6 @@
           format: ext
         }).then( async (blob) => {
           var data = decodeBase64Image(blob);
-          console.log(plugin.settings.randomID)
           saveFile(data.data, imgFile.basename + ((plugin.settings.randomID) ? '-' + makeid(8) : '') + "."+ext);
         });
       });
